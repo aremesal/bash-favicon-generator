@@ -17,7 +17,27 @@ error_param() {
 }
 
 help() {
-	echo -e "Ayuda"
+    read -r -d '' HELPTXT << EOF
+\n
+This is a very small and simple script to generate all the favicons for a website - and mobile - as well as the sidecar files.
+\n\n
+favicon.sh <image> [title]
+\n\n
+To generate the favicon just call the script passing the original image file:
+\n\n
+./favicon.sh /path/to/image.png
+\n\n
+If you want to set a title (for Android), pass a second argument:
+\n\n
+./favicon.sh /path/to/image.png "Title of my website"
+\n\n
+The script will create a folder 'favicon', and put inside all the files. Once finished, the script will show the HTML code to copy and paste into the website <head>. Just do it, and copy all the contents of the favicon/* folder to the root of your website.
+\n\n
+Please, remember that the image should be at least ${MIN_SIZE}px
+\n
+EOF
+
+    echo -e $HELPTXT
 }
 
 success_msg() {
@@ -30,7 +50,7 @@ imagick_present() {
     # command -v is POSIX compatible
     if ! command -v convert >/dev/null 2>&1 \
     || ! command -v identify >/dev/null 2>&1; then 
-        echo "${RED}Error${NC}: you need ImageMagick. You can install with 'apt-get install imagemagick'"
+        echo -e "${RED}Error${NC}: you need ImageMagick. You can install with 'apt-get install imagemagick'"
         exit 1
     fi
 }
@@ -39,14 +59,14 @@ valid_image() {
 
     # It's an image file
     if ! [ -f $1 ]; then
-        echo "${RED}Error${NC}: file '$1' doesn't exist"
+        echo -e "${RED}Error${NC}: file '$1' doesn't exist"
         help
         exit 1
     fi
 
     if ! file $1 |grep -qE 'image|bitmap' \
     || ! identify $1 >/dev/null 2>&1; then
-        echo "${RED}Error: '$1' is a not an image file"
+        echo -e "${RED}Error: '$1' is a not an image file"
         exit 1
     fi
 
@@ -57,7 +77,7 @@ valid_image() {
 
     if [ $W -lt $MIN_SIZE ] \
     || [ $H -lt $MIN_SIZE ]; then
-        echo "${RED}Error${NC}: '$1' is smaller than the minimum size ($MIN_SIZE x $MIN_SIZE)"
+        echo -e "${RED}Error${NC}: '$1' is smaller than the minimum size ($MIN_SIZE x $MIN_SIZE)"
         exit 1
     fi
     
@@ -264,7 +284,7 @@ if [[ $# -eq 2 ]] ; then
 fi
 
 case "$1" in
-    h) help ;;
+    h|-h) help ;;
     *) process_image $1 ;;
 esac
 
