@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # TODO:
-# - Add website title
 # - Option only 16x16
 # - Reduce number of icons: https://realfavicongenerator.net/blog/new-favicon-package-less-is-more/
 
@@ -290,4 +289,4 @@ esac
 
 exit 0
 
-# Si no hay ninguno o es -h mostrar ayuda
+# EOF
