@@ -5,7 +5,7 @@
 # - Option only 16x16
 # - Reduce number of icons: https://realfavicongenerator.net/blog/new-favicon-package-less-is-more/
 
-MIN_SIZE=553
+MIN_SIZE=558
 BGCOLOR='transparent'
 TITLE='Website'
 RED='\033[0;31m'
@@ -89,79 +89,79 @@ process_image() {
     convert -resize 16x16 -background $BGCOLOR -gravity center -extent 16x16 $1 favicon/favicon.png
 
     # Old Chrome
-    convert -resize 32x32 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-32.png
+    convert -resize 32x32 -background $BGCOLOR -gravity center -extent 32x32  $1 favicon/favicon-32.png
 
     # Android 36x36
-    convert -resize 36x36 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/android-icon-36x36.png
+    convert -resize 36x36  $1 favicon/android-icon-36x36.png
 
     # Android 48x48
-    convert -resize 48x48 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/android-icon-48x48.png
+    convert -resize 48x48 -background $BGCOLOR -gravity center -extent 48x48  $1 favicon/android-icon-48x48.png
 
     # Standard iOS home screen (iPod Touch, iPhone first generation to 3G)
-    convert -resize 57x57 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-57.png
+    convert -resize 57x57 -background $BGCOLOR -gravity center -extent 57x57  $1 favicon/favicon-57.png
 
     # Apple 60x60
-    convert -resize 60x60 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-60.png
+    convert -resize 60x60 -background $BGCOLOR -gravity center -extent 60x60  $1 favicon/favicon-60.png
 
     # IE 11 Tile for Windows 8.1 Start Screen
-    convert -resize 70x70 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/ms-icon-70x70.png
+    convert -resize 70x70 -background $BGCOLOR -gravity center -extent 70x70  $1 favicon/ms-icon-70x70.png
 
     # Android 72x72
-    convert -resize 72x72 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/android-icon-72x72.png
+    convert -resize 72x72 -background $BGCOLOR -gravity center -extent 72x72  $1 favicon/android-icon-72x72.png
 
     # iPad home screen icon
-    convert -resize 76x76 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-76.png
+    convert -resize 76x76 -background $BGCOLOR -gravity center -extent 76x76  $1 favicon/favicon-76.png
     
     # GoogleTV icon
-    convert -resize 96x96 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-96.png
+    convert -resize 96x96 -background $BGCOLOR -gravity center -extent 96x96  $1 favicon/favicon-96.png
 
     # Android 96x96
-    convert -resize 96x96 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/android-icon-96x96.png
+    convert -resize 96x96 -background $BGCOLOR -gravity center -extent 96x96  $1 favicon/android-icon-96x96.png
 
     # Apple 114x114
-    convert -resize 114x114 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-114.png
+    convert -resize 114x114 -background $BGCOLOR -gravity center -extent 114x114  $1 favicon/favicon-114.png
 
     # iPhone retina touch icon (Change for iOS 7: up from 114x114)
-    convert -resize 120x120 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-120.png
+    convert -resize 120x120 -background $BGCOLOR -gravity center -extent 120x120  $1 favicon/favicon-120.png
 
     # Chrome Web Store icon
-    convert -resize 128x128 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-128.png
+    convert -resize 128x128 -background $BGCOLOR -gravity center -extent 128x128  $1 favicon/favicon-128.png
 
     # Small Windows 8 Star Screen Icon
     cp favicon/favicon-128.png favicon/smalltile.png
 
     # IE10 Metro tile for pinned site    
-    convert -resize 144x144 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-144.png
+    convert -resize 144x144 -background $BGCOLOR -gravity center -extent 144x144  $1 favicon/favicon-144.png
 
     # Android 144x144
-    convert -resize 144x144 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/android-icon-144x144.png
+    convert -resize 144x144 -background $BGCOLOR -gravity center -extent 144x144  $1 favicon/android-icon-144x144.png
 
     # iPad retina touch icon (Change for iOS 7: up from 144x144)
-    convert -resize 152x152 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-152.png
+    convert -resize 152x152 -background $BGCOLOR -gravity center -extent 152x152  $1 favicon/favicon-152.png
 
     # iPhone 6 plus
-    convert -resize 180x180 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-180.png
+    convert -resize 180x180 -background $BGCOLOR -gravity center -extent 180x180  $1 favicon/favicon-180.png
 
     # Android 192x192
-    convert -resize 192x192 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/android-icon-192x192.png
+    convert -resize 192x192 -background $BGCOLOR -gravity center -extent 192x192  $1 favicon/android-icon-192x192.png
 
     # Opera Speed Dial icon (Not working in Opera 15 and later) 
-    convert -resize 195x195 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-195.png
+    convert -resize 195x195 -background $BGCOLOR -gravity center -extent 195x195  $1 favicon/favicon-195.png
 
     # Chrome for Android home screen icon
-    convert -resize 196x196 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-196.png
+    convert -resize 196x196 -background $BGCOLOR -gravity center -extent 196x196  $1 favicon/favicon-196.png
 
     # Opera Coast icon 
-    convert -resize 228x228 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/favicon-228.png
+    convert -resize 228x228 -background $BGCOLOR -gravity center -extent 228x228  $1 favicon/favicon-228.png
 
     # Medium Windows 8 Start Screen Icon
-    convert -resize 270x270 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/mediumtile.png
+    convert -resize 270x270 -background $BGCOLOR -gravity center -extent 270x270  $1 favicon/mediumtile.png
 
     # Wide Windows 8 Start Screen Icon
-    convert -resize 558x270 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/widetile.png
+    convert -resize 558x270 -background $BGCOLOR $1 favicon/widetile.png
 
     # Large Windows 8 Start Screen Icon
-    convert -resize 558x558 -background $BGCOLOR -gravity center -extent 16x16  $1 favicon/largetile.png
+    convert -resize 558x558 -background $BGCOLOR -gravity center -extent 558x558  $1 favicon/largetile.png
 
     # IE 11 Tile for Windows 8.1 Start Screen
     cat >favicon/ieconfig.xml <<EOF
