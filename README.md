@@ -16,6 +16,6 @@ If you want to set a title (for Android), pass a second argument:
 
 `./favicon.sh /path/to/image.png "Title of my website"`
 
-The script will create a folder 'favicon', and put inside all the files. Once finished, the script will show the HTML code to copy and paste in the website. Just do it, and copy all the contents of the favicon/* folder to the root of your website.
+The script will create a folder 'favicon', and put inside all the files. Once finished, the script will show the HTML code to copy and paste into the website `<head>`. Just do it, and copy all the contents of the favicon/* folder to the root of your website.
 
 Please, remember that the image should be at least 553px
