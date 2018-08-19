@@ -10,7 +10,7 @@ After cloning or download, be sure you have execution permissions:
 
 To generate the favicon just call the script passing the original image file:
 
-`./favicon.sh /path/to/image.png
+`./favicon.sh /path/to/image.png`
 
 If you want to set a title (for Android), pass a second argument:
 
